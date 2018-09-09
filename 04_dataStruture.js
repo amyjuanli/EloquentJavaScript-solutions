@@ -92,12 +92,17 @@ function arrayToList(arr) {
 
 function listToArray(list) {
     let arr = [];
-    let pointer = list;
-    while (pointer.rest) {
-        arr.push(pointer.value);
-        pointer = pointer.rest;
+    let node = list;
+    while (node) {
+        arr.push(node.value);
+        node = node.rest;
     }
-    arr.push(pointer.value);
+    arr.push(node.value);
+
+    // using for loop
+    // for (let node = list; node; node = node.rest) {
+    //     arr.push(node.value);
+    // }
     return arr;
 }
 
@@ -112,13 +117,20 @@ function nth(list, index) {
     if (index === 0) return list.value;
     if (!list) return undefined;
 
-    let pointer = list;
+    let node = list;
     let n = 0; // set initial index equal zero
     while (n < index) {
-        pointer = pointer.rest;
+        node = node.rest;
         n++;
     }
-    return pointer.value;
+    return node.value;
+}
+
+// recursive version
+function rnth(list, index) {
+    if (index === 0) return list.value;
+    else if (!list) return undefined;
+    else return (list.rest, index-1);
 }
 
 console.log(arrayToList([10, 20]));
