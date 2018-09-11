@@ -1,4 +1,3 @@
-
 /*
     DEEP COMPARISON 
 
@@ -37,6 +36,25 @@ function deepEqual(obj1, obj2) {
         return obj1 === obj2;
     }
 }
+
+// rewrite code to make it shorter and more readable 
+function deepEqual(obj1, obj2) {
+    if (obj1 === obj2) return true;
+    if (typeof obj1 !== "object" ||
+        typeof obj2 !== "object" ||
+        obj1 === null ||
+        obj2 === null) return false;
+    let obj1Keys = Object.keys(obj1),
+        obj2Keys = Object.keys(obj2);
+    if (obj1Keys.length !== obj2Keys.length) return false;
+    for (let index of obj1Keys) {
+        if (!obj2[index]) return false;
+        return deepEqual(obj1[index], obj2[index]);
+    }
+}
+
+
+// test
 let obj = {
     here: {
         is: "an"
