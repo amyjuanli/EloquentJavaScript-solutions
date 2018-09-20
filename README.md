@@ -1,5 +1,4 @@
 # EloquentJavaScript-solutions
-My solutions for the exercises included in EJS book (v3)
-
-
-This repository is created to store the solutions to all the exercies in the *Eloquent JavaScript* edition 3. 
+My personal approaches to the exercises and projects in the EJS book (v3). 
+Of course, you can always view the solutions offered by this book online:  
+https://eloquentjavascript.net/code/
