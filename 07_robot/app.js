@@ -273,15 +273,15 @@ function compareRobots(robot1, memory1, robot2, memory2) {
     let avgStepsForRobot2 = totalStepsForRobot2 / 100;
     console.log(`Average steps of robot1: ${avgStepsForRobot1}\n`);
     console.log(`Average steps of robot2: ${avgStepsForRobot2}`);
-    if (avgStepsForRobot1 < avgStepsForRobot2) {
-        console.log(`Robot1 runs faster than Robot2`);
+    if(avgStepsForRobot1 < avgStepsForRobot2) {
+        console.log(`${arguments[0].name} runs faster than ${arguments[2].name}`);
     } else {
-        console.log(`Robot2 runs faster than Robot1`);
+      console.log(`${arguments[2].name} runs faster than ${arguments[0].name}`);
     }
 }
 
 compareRobots(routeRobot, [], goalOrientedRobot, []);
 // example output: → 
-// → Average steps of robot1: 18.35
-// → Average steps of robot2: 15.45
-// → Robot2 runs faster than Robot1
+// → Average steps of robot1: 18.28
+// → Average steps of robot2: 15.39
+// → goalOrientedRobot runs faster than routeRobot
