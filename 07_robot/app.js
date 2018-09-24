@@ -285,3 +285,10 @@ compareRobots(routeRobot, [], goalOrientedRobot, []);
 // → Average steps of robot1: 18.28
 // → Average steps of robot2: 15.39
 // → goalOrientedRobot runs faster than routeRobot
+
+
+/* 
+STEP 5
+TRY TO BUILD ANOTHER ROBOT WHICH IS MORE EFFICIENT THAN GOAL ORIENTED ROBOT
+AND TEST ITS PERFORMANCE USING PREVIOUS FUNCTION (COMPARE ROBOTS())
+*/
